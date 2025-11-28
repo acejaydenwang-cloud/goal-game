@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flow Warrior | 心流战纪</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Cinzel', 'serif'],
+            },
+            colors: {
+              'void': '#020617',
+              'gold': '#fbbf24',
+              'gold-dim': '#b45309',
+              'magic': '#a855f7',
+              'magic-dim': '#6b21a8',
+              'blood': '#ef4444',
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'breathe': 'breathe 12s infinite ease-in-out',
+              'shake': 'shake 0.5s cubic-bezier(.36,.07,.19,.97) both',
+              'slide-bg': 'slide-bg 20s linear infinite',
+            },
+            keyframes: {
+              breathe: {
+                '0%, 100%': { transform: 'scale(1)', opacity: '0.3' },
+                '33%': { transform: 'scale(1.5)', opacity: '0.8' },
+                '66%': { transform: 'scale(1.5)', opacity: '0.8' },
+                '100%': { transform: 'scale(1)', opacity: '0.3' },
+              },
+              shake: {
+                '10%, 90%': { transform: 'translate3d(-1px, 0, 0)' },
+                '20%, 80%': { transform: 'translate3d(2px, 0, 0)' },
+                '30%, 50%, 70%': { transform: 'translate3d(-4px, 0, 0)' },
+                '40%, 60%': { transform: 'translate3d(4px, 0, 0)' }
+              },
+              'slide-bg': {
+                '0%': { backgroundPosition: '0 0' },
+                '100%': { backgroundPosition: '-40px 0' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #020617;
+        color: #e2e8f0;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .glass-panel {
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .neon-text-gold {
+        text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+      }
+      .neon-text-magic {
+        text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+      }
+      .neon-border-gold {
+        box-shadow: 0 0 10px rgba(251, 191, 36, 0.2), inset 0 0 10px rgba(251, 191, 36, 0.1);
+      }
+      /* Cyber Grid Background */
+      .cyber-grid {
+        background-image: 
+          linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+        background-size: 40px 40px;
+        transform-style: preserve-3d;
+        transform: perspective(300px) rotateX(45deg) scale(2);
+        animation: slide-bg 2s linear infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
